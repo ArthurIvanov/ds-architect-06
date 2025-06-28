@@ -305,19 +305,3 @@ export const lightTheme: DefaultTheme = {
 		},
 	},
 };
-
-export const darkTheme: DefaultTheme = {
-	...lightTheme,
-	colors: {
-		bg: {
-			neutral: {
-				section: {
-					calm: colors.grey[800],
-				},
-			},
-		},
-		text: {
-			main: colors.grey[50],
-		},
-	},
-};
