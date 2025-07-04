@@ -85,7 +85,7 @@ declare module "styled-components" {
 						active: string;
 					};
 				};
-				critical: {
+				pink: {
 					calm: {
 						enabled: string;
 						hover: string;
@@ -119,28 +119,9 @@ declare module "styled-components" {
 						active: string;
 					};
 				};
-				pink: {
-					calm: {
-						enabled: string;
-						hover: string;
-						active: string;
-					};
-					loud: {
-						enabled: string;
-						hover: string;
-						active: string;
-					};
-					bold: {
-						enabled: string;
-						hover: string;
-						active: string;
-					};
-				};
 			};
-
 			border: {
 				disabled: string;
-
 				lead: {
 					calm: {
 						enabled: string;
@@ -192,7 +173,7 @@ declare module "styled-components" {
 						enabled: string;
 					};
 				};
-				critical: {
+				pink: {
 					calm: {
 						enabled: string;
 					};
@@ -208,7 +189,7 @@ declare module "styled-components" {
 						enabled: string;
 					};
 				};
-				pink: {
+				critical: {
 					calm: {
 						enabled: string;
 					};
@@ -217,7 +198,6 @@ declare module "styled-components" {
 					};
 				};
 			};
-
 			text: {
 				main: string;
 				mainOnLight: string;
@@ -250,7 +230,7 @@ declare module "styled-components" {
 						enabled: string;
 					};
 				};
-				critical: {
+				pink: {
 					calm: {
 						enabled: string;
 					};
@@ -266,7 +246,7 @@ declare module "styled-components" {
 						enabled: string;
 					};
 				};
-				pink: {
+				critical: {
 					calm: {
 						enabled: string;
 					};
@@ -275,37 +255,119 @@ declare module "styled-components" {
 					};
 				};
 			};
-
 			link: {
-				calm: {
-					enabled: string;
-					hover: string;
-					active: string;
-				};
-				loud: {
-					enabled: string;
-					hover: string;
-					active: string;
-				};
-				onLight: {
-					enabled: string;
-					hover: string;
-					active: string;
-				};
-				onDark: {
-					enabled: string;
-					hover: string;
-					active: string;
-				};
-				inverted: {
-					enabled: string;
-					hover: string;
-					active: string;
-				};
+				calm: { enabled: string; hover: string; active: string };
+				loud: { enabled: string; hover: string; active: string };
+				onLight: { enabled: string; hover: string; active: string };
+				onDark: { enabled: string; hover: string; active: string };
+				inverted: { enabled: string; hover: string; active: string };
 			};
 		};
-		// typography: {};
-		// spacing: {};
-		// borderRadius: {};
+		typography: {
+			fontFamily: {
+				heading: string;
+				text: string;
+				monospace: string;
+			};
+			fontSize: {
+				heading: {
+					h1: string;
+					h2: string;
+					h3: string;
+					h4: string;
+					h5: string;
+					h6: string;
+				};
+				text: {
+					base: string;
+					small: string;
+					extraSmall: string;
+				};
+				component: {
+					base: string;
+					small: string;
+					extraSmall: string;
+				};
+			};
+			lineHeight: {
+				heading: {
+					h1: string;
+					h2: string;
+					h3: string;
+					h4: string;
+					h5: string;
+					h6: string;
+				};
+				text: {
+					base: string;
+					small: string;
+					extraSmall: string;
+				};
+				component: {
+					base: string;
+					small: string;
+					extraSmall: string;
+				};
+			};
+			fontWeight: {
+				regular: string;
+				medium: string;
+				semiBold: string;
+			};
+		};
+		spacing: {
+			inner: {
+				noGap: string;
+				closest: string;
+				close: string;
+				related: string;
+				grouped: string;
+			};
+			outer: {
+				related: string;
+				grouped: string;
+				subSection: string;
+				section: string;
+			};
+			padding: {
+				compact: string;
+				default: string;
+				relaxed: string;
+				large: string;
+			};
+			height: {
+				xxxxSmall: string;
+				xxxSmall: string;
+				xxSmall: string;
+				xSmall: string;
+				small: string;
+				base: string;
+				large: string;
+				xLarge: string;
+				xxLarge: string;
+			};
+		};
+		borderRadius: {
+			micro: string;
+			componentInner: string;
+			componentBase: string;
+			secionInner: string;
+			sectionBase: string;
+		};
+		shadows: {
+			surface: {
+				elevated: string;
+				hover: string;
+			};
+			overlay: {
+				content: string;
+				tooltip: string;
+				drawer: string;
+				modal: string;
+				notifications: string;
+			};
+		};
+		zIndices: {};
+		focus: string;
 	}
 }
