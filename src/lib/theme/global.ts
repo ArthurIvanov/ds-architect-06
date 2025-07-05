@@ -9,13 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 	body {
-            // -webkit-font-smoothing: antialiased;
-            // -moz-osx-font-smoothing: grayscale;
-            // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            // -webkit-tap-highlight-color: transparent;
-            // -webkit-overflow-scrolling: touch;
 
-            font-family: sans-serif;
+            font-family: ${(props) => props.theme.typography.fontFamily.text};
             background: ${(props) =>
 				props.theme.colors.bg.neutral.section.calm};
 	}

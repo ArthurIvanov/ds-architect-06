@@ -369,5 +369,8 @@ declare module "styled-components" {
 		};
 		zIndices: {};
 		focus: string;
+		animation: {
+			base: string;
+		};
 	}
 }

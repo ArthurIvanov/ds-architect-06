@@ -1,5 +1,20 @@
-# global styles recap
-# shadows recap
-# focus recap
-# button
+# ✅ global styles recap 
+# ✅ shadows recap
+# ✅ focus recap
+# ✅ icons - svg
+# button & buttonLink
+    ✅ project structure
+    ✅ exports
+    ✅ imports
+    ✅ main interface
+    ✅ main styles
+    ✅ props & styles
+    
 # card
+    ✅ project structure
+    ✅ exports
+    ✅ imports
+    main interface
+    component structure
+    main styles
+    props & styles

@@ -389,6 +389,9 @@ export const lightTheme: DefaultTheme = {
 	},
 	zIndices: { ...zIndices },
 	focus: `0px 0px 0px 2px rgba(79, 96, 255, 0.25)`,
+	animation: {
+		base: `all 0.2s`,
+	},
 };
 
 export const darkTheme: DefaultTheme = {
