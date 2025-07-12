@@ -57,7 +57,7 @@ const StyledBadge = styled.div<IBadgeProps>`
             background: ${props.theme.colors.bg[props.appearance].bold.enabled};
             color: ${props.theme.colors.text[props.appearance].calm.enabled};
             border-color: ${
-				props.theme.colors.border[props.appearance].calm.enabled
+				props.theme.colors.border[props.appearance].bold.enabled
 			};
             `}
 

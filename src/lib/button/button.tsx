@@ -1,23 +1,42 @@
 import styled from "styled-components";
 import { Icon, iconsType } from "../icon";
+import { Spinner } from "../spinner";
 
 interface IButtonProps {
-	// DONE
+	/**
+	 * Визуальный вес компонента
+	 */
 	appearance?: "primary" | "secondary" | "onDark" | "onLight" | "inverted";
-	// DONE
+
+	/**
+	 * Размер компонента
+	 */
 	size?: "base" | "small";
-	// DONE
+
+	/**
+	 * Делает кнопку недоступной для взаимодействия
+	 */
 	disabled?: boolean;
 
 	// OFFLINE
+	/**
+	 * Отображает процесс выполнения вызванный нажатием
+	 */
 	loading?: boolean;
 
-	// DONE
+	/**
+	 * Отображает иконку до текста
+	 */
 	iconBefore?: iconsType;
 
-	// DONE
+	/**
+	 * Отображает иконку после текста
+	 */
 	iconAfter?: iconsType;
-	// DONE
+
+	/**
+	 * Наполнение текстом
+	 */
 	text?: string;
 }
 
@@ -32,6 +51,9 @@ const StyledButton = styled.button<IButtonProps>`
 	transition: ${(props) => props.theme.animation.base};
 	&:focus {
 		box-shadow: ${(props) => props.theme.focus};
+	}
+	.btn-loading {
+		display: none;
 	}
 
 	// APPERANCE PROP
@@ -80,6 +102,18 @@ const StyledButton = styled.button<IButtonProps>`
     cursor: not-allowed;
 	}`}
             
+    ${(props) =>
+		props.loading &&
+		`
+        color: transparent;
+        position: relative;
+        .spinner {
+        display inline-block;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        }
+        `}
             
     // SIZE
     ${(props) =>
@@ -104,6 +138,9 @@ const StyledButton = styled.button<IButtonProps>`
             `}
 `;
 
+/**
+ * Используется как первичный призыв к действию, а также для перехода на другие разделы приложеня
+ */
 export const Button: React.FC<IButtonProps> = ({
 	appearance = "primary",
 	size = "small",
@@ -122,13 +159,22 @@ export const Button: React.FC<IButtonProps> = ({
 			iconAfter={iconAfter}
 			iconBefore={iconBefore}
 		>
-			{iconBefore && (
-				<Icon size={size === "base" ? 20 : 16} iconName={iconBefore} />
-			)}
-			{text}
-			{iconAfter && (
-				<Icon size={size === "base" ? 20 : 16} iconName={iconAfter} />
-			)}
+			{loading ? <Spinner size="base" /> : null}
+			<span className={`btn-body ${loading ? "btn-loading" : undefined}`}>
+				{iconBefore ? (
+					<Icon
+						iconName={iconBefore}
+						size={size === "base" ? 20 : 16}
+					/>
+				) : null}
+				{text}
+				{iconAfter ? (
+					<Icon
+						iconName={iconBefore}
+						size={size === "base" ? 20 : 16}
+					/>
+				) : null}
+			</span>
 		</StyledButton>
 	);
 };

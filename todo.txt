@@ -9,12 +9,40 @@
     ✅ main interface
     ✅ main styles
     ✅ props & styles
+# button-grooup 🟨
+    project structure
+    exports
+    imports
+    main interface
+    main styles
+    props & styles
+
+# divider 🟨
+    project structure
+    exports
+    imports
+    main interface
+    main styles
+    props & styles
     
-# card
+# card 🟨
     ✅ project structure
     ✅ exports
     ✅ imports
-    main interface
-    component structure
-    main styles
-    props & styles
+    ✅ main interface
+    ✅ component structure
+    ✅ main styles
+    ✅ props & styles
+    🟨 sticky buttonLink 
+
+# storybook
+    ✅ intro
+    ✅ structure
+    ✅ button
+    ✅ card
+
+# deploy
+    resource https://www.netlify.com/
+    app interface
+    preprare to deploy
+    recap

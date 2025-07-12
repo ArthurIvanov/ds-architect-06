@@ -13,6 +13,7 @@ type TAppearance =
 interface ISpinnerProps {
 	size: TSIze;
 	appearance?: TAppearance;
+	className?: string;
 }
 
 const StyledSpinner = styled.div<ISpinnerProps>`
@@ -60,8 +61,9 @@ const StyledSpinner = styled.div<ISpinnerProps>`
 export const Spinner: FC<ISpinnerProps> = ({
 	size = "base",
 	appearance = "secondary",
+	className,
 }) => (
-	<StyledSpinner appearance={appearance} size={size}>
+	<StyledSpinner appearance={appearance} size={size} className={className}>
 		<div />
 	</StyledSpinner>
 );
