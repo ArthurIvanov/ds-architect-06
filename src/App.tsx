@@ -5,7 +5,7 @@ import { lightTheme, darkTheme } from "./lib/theme";
 import { Card, Button, Badge } from "./lib";
 
 function App() {
-	const switcher = false;
+	const switcher = true;
 	return (
 		<ThemeProvider theme={switcher ? lightTheme : darkTheme}>
 			<GlobalStyle />
@@ -26,13 +26,11 @@ function App() {
 					newsData="12.07.2025"
 					badgeText="Новости"
 					buttonText="Подробнее"
+					appearance="blue"
 				/>
 				Hide code
 				<Button appearance="primary" size="base" text="Hello Primary" />
-				<Card
-					text="Подразделение ветроэнергетического дивизиона Росатома и Кьези подписали соглашение на приобретение зеленых сертификатов I - REC"
-					textSize="base"
-				/>
+				<Card text="Hello" textSize="base" />
 			</main>
 		</ThemeProvider>
 	);

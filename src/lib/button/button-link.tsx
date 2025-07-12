@@ -2,22 +2,19 @@ import styled from "styled-components";
 import { Icon, iconsType } from "../icon";
 
 interface IButtonLinkProps {
-	// DONE
 	appearance?: "primary" | "inverted";
-	// DONE
+
 	size?: "base" | "small";
-	// DONE
+
 	disabled?: boolean;
 
 	// OFFLINE
 	loading?: boolean;
 
-	// DONE
 	iconBefore?: iconsType;
 
-	// DONE
 	iconAfter?: iconsType;
-	// DONE
+
 	text?: string;
 }
 
@@ -30,6 +27,7 @@ const StyledButtonLink = styled.button<IButtonLinkProps>`
 	justify-content: center;
 	align-items: center;
 	padding: 0;
+	cursor: pointer;
 	transition: ${(props) => props.theme.animation.base};
 	&:focus {
 		box-shadow: ${(props) => props.theme.focus};

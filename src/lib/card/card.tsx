@@ -11,7 +11,7 @@ interface ICardProps {
 	/**
 	 * Наполнение текстом
 	 */
-	text?: string;
+	text: string;
 
 	/**
 	 * Меняет размер шрифта
@@ -99,9 +99,9 @@ const StyledCard = styled.div<ICardProps>`
          color: ${props.theme.colors.text.inverted};
         .card-header {
 		    & > .card-header-date {
-            
+                color: ${props.theme.colors.text.inverted};
             }
-    }
+        }
         .card-body {
 		    & > .card-body-text {
                 color: ${props.theme.colors.text.inverted};
@@ -136,6 +136,7 @@ export const Card: React.FC<ICardProps> = ({
 			newsData={newsData}
 			badgeText={badgeText}
 			buttonText={buttonText}
+			text={text}
 		>
 			<div className="card-header">
 				<span className="card-header-date">{newsData}</span>

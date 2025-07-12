@@ -48,6 +48,7 @@ const StyledButton = styled.button<IButtonProps>`
 	justify-content: center;
 	align-items: center;
 	padding: unset;
+	cursor: pointer;
 	transition: ${(props) => props.theme.animation.base};
 	&:focus {
 		box-shadow: ${(props) => props.theme.focus};
@@ -56,7 +57,6 @@ const StyledButton = styled.button<IButtonProps>`
 		display: none;
 	}
 
-	// APPERANCE PROP
 	${(props) =>
 		props.appearance === "primary" &&
 		`

@@ -24,6 +24,7 @@ const StyledButtonIcon = styled.button<IButtonIconProps>`
 	justify-content: center;
 	align-items: center;
 	padding: unset;
+	cursor: pointer;
 	transition: ${(props) => props.theme.animation.base};
 	&:focus {
 		box-shadow: ${(props) => props.theme.focus};

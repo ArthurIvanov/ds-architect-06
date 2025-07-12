@@ -13,6 +13,21 @@ export default {
     },
     tags: ['autodocs']
 }
+export const SizeBase = {
+    args: {
+
+        size: "base"
+    }
+}
+
+export const SizeSmall = {
+    args: {
+
+        size: "small"
+    }
+}
+
+
 
 export const Primary = {
     args: {
@@ -26,7 +41,7 @@ export const Secondary = {
     args: {
         appearance: "secondary",
         size: "base",
-        text: "Hello Primary",
+        text: "Hello Secondary",
     }
 }
 
